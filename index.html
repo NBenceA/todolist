@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladatkezelő</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feladatkezelő</h1>
+        <div class="task-input">
+            <input type="text" id="task-title" placeholder="Feladat címe">
+            <input type="date" id="task-deadline">
+            <select id="task-priority">
+                <option value="low">Alacsony</option>
+                <option value="medium">Közepes</option>
+                <option value="high">Magas</option>
+            </select>
+            <button onclick="addTask()">Hozzáadás</button>
+        </div>
+
+        <div class="task-filters">
+            <input type="text" id="search" placeholder="Keresés...">
+            <select id="filter-priority" onchange="filterTasks()">
+                <option value="all">Összes</option>
+                <option value="low">Alacsony</option>
+                <option value="medium">Közepes</option>
+                <option value="high">Magas</option>
+            </select>
+        </div>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
